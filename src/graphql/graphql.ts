@@ -6,6 +6,9 @@ const resolvers = {
     splitName: (_: any, { fullName }: { fullName: string }) => NameService.splitName(fullName),
     combineName: (_: any, { firstName, lastName }: { firstName: string; lastName: string }) =>
       NameService.combineName(firstName, lastName),
+    countCharacters: (_:any, { input }: { input: string }) => {
+      return input.length;
+    }
   },
 };
 

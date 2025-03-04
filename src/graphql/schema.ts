@@ -7,5 +7,6 @@ export const schema = `
   type Query {
     splitName(fullName: String!): Name
     combineName(firstName: String!, lastName: String!): String!
+    countCharacters(input: String!): Int!
   }
 `;
