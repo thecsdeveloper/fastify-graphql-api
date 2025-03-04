@@ -14,11 +14,13 @@
   "description": "",
   "dependencies": {
     "fastify-cli": "^7.3.0",
-    "mercurius": "^16.1.0"
+    "mercurius": "^16.1.0",
+    "graphql": "^16.6.0"
   },
   "devDependencies": {
     "@types/node": "^22.13.9",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "@types/ws": "^8.5.9"
   }
 }

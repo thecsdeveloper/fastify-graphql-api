@@ -5,7 +5,9 @@ import graphqlSchema from './src/graphql/graphql'; // Import schema & resolvers
 
 const app = Fastify({ logger: true });
 
-// ✅ Register GraphQL Plugin with External Schema & Resolvers
+const PORT = process.env.PORT || 3000;
+
+// Register GraphQL Plugin with External Schema & Resolvers
 app.register(mercurius, {
   schema: graphqlSchema.schema,
   resolvers: graphqlSchema.resolvers,
@@ -13,7 +15,7 @@ app.register(mercurius, {
   path: '/graphql'
 });
 
-// ✅ Register Health Check Route
+// Register Health Check Route
 app.register(healthRoute);
 
 // Start Server
