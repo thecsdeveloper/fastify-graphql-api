@@ -21,7 +21,7 @@ app.register(healthRoute);
 // Start Server
 const start = async () => {
   try {
-    await app.listen({ port: 3000 });
+    await app.listen({ port: PORT, host: '0.0.0.0' });
     console.log("🚀 GraphQL running at http://localhost:3000/graphql");
   } catch (err) {
     app.log.error(err);
