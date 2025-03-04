@@ -5,7 +5,7 @@ import graphqlSchema from './src/graphql/graphql'; // Import schema & resolvers
 
 const app = Fastify({ logger: true });
 
-const PORT = process.env.PORT || 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 // Register GraphQL Plugin with External Schema & Resolvers
 app.register(mercurius, {
